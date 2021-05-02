@@ -3,8 +3,23 @@ import style from './Footer.module.scss';
 import { faFacebookF, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import emailjs from 'emailjs-com';
+// service_rfm6cqt
 
 const Footer = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    e.target.subject = "Porfolio Email";
+    console.log(e.target.value);
+
+    emailjs.sendForm('gmail', 'template_e4h7irb', e.target, 'user_zZUKcc5iPA1oybfhB1heV')
+      .then((result) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+    e.target.reset();
+  }
   return (
     <div className={style.footer} id="footer">
       <div className="container">
@@ -23,18 +38,18 @@ const Footer = () => {
           </div>
           <div className="col-md-6">
             <h2 className='mb-4'>Let me hear from you</h2>
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className="mb-3">
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Your Name" />
+                <input type="text" class="form-control" name='name' required placeholder="Your Name" />
               </div>
               <div className="mb-3">
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" />
+                <input type="email" class="form-control" name='email' required placeholder="name@example.com" />
               </div>
               <div className="mb-3">
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder='Your Message'></textarea>
+                <textarea class="form-control" name='message' required rows="3" placeholder='Your Message'></textarea>
               </div>
               <div className="d-flex justify-content-end">
-                <button className="btn btn-custom me-1"><FontAwesomeIcon className={style.socialIcon} icon={faPaperPlane} /> Send Message</button>
+                <button value='send' type='submit' className="btn btn-custom me-1"><FontAwesomeIcon className={style.socialIcon} icon={faPaperPlane} /> Send Message</button>
               </div>
             </form>
           </div>
