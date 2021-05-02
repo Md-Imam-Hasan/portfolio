@@ -1,0 +1,28 @@
+@import "../../styles/Color/Color.scss";
+.footer {
+  margin-top: 130px;
+  background-color: $oxford;
+  color: white;
+}
+.brandColor {
+  color: $turquoise;
+}
+.socialMedia {
+  margin-top: 30px;
+  .socialIcon {
+    font-size: 27px;
+    color: white;
+  }
+}
+.iconItem {
+  cursor: pointer;
+  border-radius: 5px;
+  align-items: center;
+  padding: 5px 6px;
+  height: 38px;
+  width: 38px;
+  background-color: #222;
+  &:hover {
+    background-color: $turquoise;
+  }
+}

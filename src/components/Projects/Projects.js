@@ -8,7 +8,7 @@ import { faGlobe, faCode } from '@fortawesome/free-solid-svg-icons'
 
 const Projects = () => {
   return (
-    <div className={style.projects}>
+    <div className={style.projects} id="projects">
       <div className="container ">
         <div className="projectTitle text-center">
           <h1>My Projects</h1>
@@ -30,10 +30,10 @@ const Projects = () => {
                 </div>
               </div>
               <div className="d-flex justify-content-around my-4">
-                <a href="https://car-shire.web.app/" type='button' className='btn btn-outline-info' rel="noreferrer" target="_blank">
+                <a href="https://car-shire.web.app/" type='button' className='btn btn-custom' rel="noreferrer" target="_blank">
                   <FontAwesomeIcon icon={faGlobe} /> Website
                 </a>
-                <a href="https://github.com/Md-Imam-Hasan/Car-Shire-Client" type='button' className='btn btn-outline-info' rel="noreferrer" target="_blank">
+                <a href="https://github.com/Md-Imam-Hasan/Car-Shire-Client" type='button' className='btn btn-custom' rel="noreferrer" target="_blank">
                   <FontAwesomeIcon icon={faCode} /> Code
                 </a>
               </div>
@@ -55,10 +55,10 @@ const Projects = () => {
                 </div>
               </div>
               <div className="d-flex justify-content-around my-4">
-                <a href="https://book-bay-1.web.app/" type='button' className='btn btn-outline-info' rel="noreferrer" target="_blank">
+                <a href="https://book-bay-1.web.app/" type='button' className='btn btn-custom' rel="noreferrer" target="_blank">
                   <FontAwesomeIcon icon={faGlobe} /> Website
                 </a>
-                <a href="https://github.com/Md-Imam-Hasan/Book-Bay-Client" type='button' className='btn btn-outline-info' rel="noreferrer" target="_blank">
+                <a href="https://github.com/Md-Imam-Hasan/Book-Bay-Client" type='button' className='btn btn-custom' rel="noreferrer" target="_blank">
                   <FontAwesomeIcon icon={faCode} /> Code
                 </a>
               </div>
@@ -78,10 +78,10 @@ const Projects = () => {
                 </div>
               </div>
               <div className="technology d-flex justify-content-around my-4">
-                <a href="https://md-imam-hasan.github.io/Cooking-Master/" type='button' className='btn btn-outline-info' rel="noreferrer" target="_blank">
+                <a href="https://md-imam-hasan.github.io/Cooking-Master/" type='button' className='btn btn-custom' rel="noreferrer" target="_blank">
                   <FontAwesomeIcon icon={faGlobe} /> Website
                 </a>
-                <a href="https://github.com/Md-Imam-Hasan/Cooking-Master" type='button' className='btn btn-outline-info' rel="noreferrer" target="_blank">
+                <a href="https://github.com/Md-Imam-Hasan/Cooking-Master" type='button' className='btn btn-custom' rel="noreferrer" target="_blank">
                   <FontAwesomeIcon icon={faCode} /> Code
                 </a>
               </div>
