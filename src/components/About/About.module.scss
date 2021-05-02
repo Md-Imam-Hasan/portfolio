@@ -1,0 +1,35 @@
+@import "../../styles/Color/Color.scss";
+.about {
+  margin: 100px 0;
+}
+.dp {
+  border: 7px solid white;
+  border-radius: 5px;
+  // margin-top: -120px;
+  width: 400px;
+  position: relative;
+  &::after {
+    content: "";
+    left: -28px;
+    top: 30px;
+    height: 98%;
+    width: 98%;
+    border: 7px solid $turquoise;
+    border-radius: 5px;
+    position: absolute;
+    z-index: -1;
+  }
+}
+.aboutMe {
+  h1 {
+    margin-bottom: 30px;
+  }
+  p {
+    text-align: justify;
+    margin-left: 30px;
+    line-height: 28px;
+  }
+  a {
+    margin-left: 30px;
+  }
+}

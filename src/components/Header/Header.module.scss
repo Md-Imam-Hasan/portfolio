@@ -1,0 +1,22 @@
+@import "../../styles/Color/Color.scss";
+.header {
+  height: 550px;
+  background-color: $cobalt;
+}
+.welcomeText {
+  color: white;
+  margin-top: 60px;
+  text-align: center;
+}
+.welcomeText span {
+  color: $turquoise;
+}
+.welcomeText h1 {
+  font-size: 56px;
+}
+.welcomeText h2 {
+  font-size: 40px;
+}
+.dot {
+  width: 100px;
+}
