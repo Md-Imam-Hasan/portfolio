@@ -11,7 +11,7 @@
 }
 .welcomeText {
   color: white;
-  padding-top: 140px;
+  padding-top: 130px;
   text-align: center;
 }
 .welcomeText span {
@@ -25,4 +25,20 @@
 }
 .dot {
   width: 100px;
+}
+.scroll {
+  width: 30px;
+  margin-top: 2em;
+}
+.circle {
+  animation: circleAnim 1s infinite alternate-reverse;
+}
+@keyframes circleAnim {
+  0% {
+    transform: translate(262px, 798px);
+    z-index: 5;
+  }
+  100% {
+    transform: translate(262px, 830px);
+  }
 }

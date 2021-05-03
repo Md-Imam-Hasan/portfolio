@@ -7,16 +7,16 @@ import ImageSlider from '../ImageSlider/ImageSlider';
 const ProjectCard = (props) => {
   const { projectImg, projectName, projectDetails, technology, websiteLink, codeLink } = props.project;
   return (
-    <div className="col-md-4">
+    <div className="col-lg-4 my-4">
       <div className={`card ${style.projectCard}`}>
         <ImageSlider projectImg={projectImg}></ImageSlider>
         <div className="card-body text-center mt-3">
           <h3 className='mb-3'>{projectName}</h3>
-          <h6>{projectDetails}</h6>
+          <p>{projectDetails}</p>
           <div className="technology d-flex justify-content-between mt-4">
             {
               technology.map(icon => (
-                <img src={`https://img.icons8.com/color/48/000000/${icon}.png`} alt={icon} />
+                <img src={`https://img.icons8.com/color/32/000000/${icon}.png`} alt={icon} />
               ))
             }
           </div>

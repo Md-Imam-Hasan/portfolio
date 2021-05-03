@@ -51,7 +51,7 @@ const Projects = () => {
         <div className="projectTitle text-center">
           <h1>My Projects</h1>
         </div>
-        <div className="mt-5 row">
+        <div className="mt-3 row">
           {
             projects.map(project => <ProjectCard key={project.id} project={project}></ProjectCard>)
           }
