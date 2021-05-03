@@ -4,15 +4,12 @@ import { faFacebookF, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import emailjs from 'emailjs-com';
-// service_rfm6cqt
 
 const Footer = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
-    e.target.subject = "Porfolio Email";
-    console.log(e.target.value);
 
-    emailjs.sendForm('gmail', 'template_e4h7irb', e.target, 'user_zZUKcc5iPA1oybfhB1heV')
+    emailjs.sendForm('service_rfm6cqt', 'template_e4h7irb', e.target, 'user_zZUKcc5iPA1oybfhB1heV')
       .then((result) => {
         console.log(result.text);
       }, (error) => {

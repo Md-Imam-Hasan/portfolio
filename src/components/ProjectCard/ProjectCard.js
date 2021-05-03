@@ -2,13 +2,14 @@ import React from 'react';
 import style from './ProjectCard.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobe, faCode } from '@fortawesome/free-solid-svg-icons';
+import ImageSlider from '../ImageSlider/ImageSlider';
 
 const ProjectCard = (props) => {
   const { projectImg, projectName, projectDetails, technology, websiteLink, codeLink } = props.project;
   return (
     <div className="col-md-4">
       <div className={`card ${style.projectCard}`}>
-        <img src={projectImg} alt="" className="img-fluid" />
+        <ImageSlider projectImg={projectImg}></ImageSlider>
         <div className="card-body text-center mt-3">
           <h3 className='mb-3'>{projectName}</h3>
           <h6>{projectDetails}</h6>
