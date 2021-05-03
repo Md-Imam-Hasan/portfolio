@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import style from './ImageSlider.module.scss'
 
 
@@ -6,7 +6,7 @@ const delay = 2500;
 const ImageSlider = (props) => {
   const colors = props.projectImg;
   console.log(colors);
-  const [index, setIndex] = React.useState(0);
+  const [index, setIndex] = useState(0);
   const timeoutRef = React.useRef(null);
 
   function resetTimeout() {
@@ -15,7 +15,7 @@ const ImageSlider = (props) => {
     }
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     resetTimeout();
     timeoutRef.current = setTimeout(
       () =>

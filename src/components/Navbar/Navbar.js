@@ -19,19 +19,19 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="ms-auto navbar-nav">
             <li className="nav-item">
-              <Link smooth={true} duration={500} className="nav-link me-5" to="home">Home</Link>
+              <Link smooth={true} duration={500} className="nav-link me-4" to="home">Home</Link>
             </li>
             <li className="nav-item">
-              <Link smooth={true} duration={500} className="nav-link me-5" to="projects">Projects</Link>
+              <Link smooth={true} duration={500} className="nav-link me-4" to="projects">Projects</Link>
             </li>
             <li className="nav-item">
-              <Link smooth={true} duration={500} className="nav-link me-5" to="skills">Skills</Link>
+              <Link smooth={true} duration={500} className="nav-link me-4" to="skills">Skills</Link>
             </li>
+            {/* <li className="nav-item">
+              <Link smooth={true} duration={500} className="nav-link me-4" to="blogs">Blogs</Link>
+            </li> */}
             <li className="nav-item">
-              <Link smooth={true} duration={500} className="nav-link me-5" to="blogs">Blogs</Link>
-            </li>
-            <li className="nav-item">
-              <Link smooth={true} duration={500} className="nav-link me-5" to="about">About Me</Link>
+              <Link smooth={true} duration={500} className="nav-link me-4" to="about">About Me</Link>
             </li>
             <li className="nav-item">
               <Link smooth={true} duration={500} className="nav-link" to="footer">Contact</Link>
