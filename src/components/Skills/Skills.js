@@ -6,8 +6,8 @@ const Skills = () => {
       <div className="container ">
         <div className="skillTitle text-center">
           <h1>My Skills</h1>
-          <div className="skillElement row mt-3">
-            <div className="col-md-6 my-4 col-12">
+          <div className={`${style.skillElement} row mt-3`}>
+            <div className="my-4 col-12">
               <div className='d-flex justify-content-between'>
                 <div>
                   <img src="https://img.icons8.com/color/48/000000/html-5--v1.png" alt='Html5' />
@@ -35,7 +35,7 @@ const Skills = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-6 my-4 col-12">
+            <div className="my-4 col-12">
               <div className='d-flex justify-content-between'>
                 <div>
                   <img src="https://img.icons8.com/material-sharp/48/000000/github.png" alt='Git' />

@@ -4,10 +4,10 @@ body {
   color: $text;
 }
 .btn-custom {
-  border: 2px solid $turquoise;
-  color: $turquoise;
+  border: 2px solid #fb4848;
+  color: #fb4848;
   &:hover {
-    color: black;
-    background-color: $turquoise;
+    color: white;
+    background-color: #fb4848;
   }
 }

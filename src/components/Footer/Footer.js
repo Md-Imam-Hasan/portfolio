@@ -27,7 +27,7 @@ const Footer = () => {
             <p>Phone: <span className={style.brandColor}> +88017-68022896</span></p>
             <div className={style.socialMedia}>
               <ul className="list-inline">
-                <li className={`list-inline-item ${style.iconItem}`}><a href="/https://www.facebook.com/imamhasan0007"><FontAwesomeIcon className={style.socialIcon} icon={faFacebookF} /></a></li>
+                <li className={`list-inline-item ${style.iconItem}`}><a href="https://www.facebook.com/imamhasan0007"><FontAwesomeIcon className={style.socialIcon} icon={faFacebookF} /></a></li>
                 <li className={`list-inline-item ${style.iconItem}`}><a href="https://github.com/Md-Imam-Hasan"><FontAwesomeIcon className={style.socialIcon} icon={faGithub} /></a></li>
                 <li className={`list-inline-item ${style.iconItem}`}><a href="https://www.linkedin.com/in/md-imam-hasan-aaba051a6/"><FontAwesomeIcon className={style.socialIcon} icon={faLinkedin} /></a></li>
               </ul>
