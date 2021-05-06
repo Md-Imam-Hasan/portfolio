@@ -5,29 +5,46 @@ import { faGlobe, faCode } from '@fortawesome/free-solid-svg-icons';
 import ImageSlider from '../ImageSlider/ImageSlider';
 
 const ProjectCard = (props) => {
-  const { projectImg, projectName, projectDetails, technology, websiteLink, codeLink } = props.project;
+  const { projectImg, projectName, projectDetails, technology, websiteLink, clientCodeLink, serverCodeLink } = props.project;
   return (
-    <div className="col-lg-4 my-4">
-      <div className={`card ${style.projectCard}`}>
-        <ImageSlider projectImg={projectImg}></ImageSlider>
-        <div className="card-body text-center mt-3">
-          <h3 className='mb-3'>{projectName}</h3>
-          <p>{projectDetails}</p>
-          <div className="technology d-flex justify-content-between mt-4">
+    <div className="row my-3">
+      <div className="col-lg-5 col-12 my-4 order-2 order-lg-1 px-4 px-lg-0">
+        <div className={`${style.projectCard}`}>
+          <div className="">
+            <h3 className='mb-4'>{projectName}</h3>
+            <p className={style.projectDetails}>{projectDetails}</p>
+            <div className="technology d-flex align-items-center mt-4">
+              <h5>Technology : </h5>
+              {
+                technology.map(icon => (
+                  <img className={style.technologyIcon} src={`https://img.icons8.com/color/32/000000/${icon}.png`} alt={icon} />
+                ))
+              }
+            </div>
+          </div>
+          <div className="d-flex my-4">
+            <a href={websiteLink} type='button' className='btn btn-sm btn-custom me-3' rel="noreferrer" target="_blank">
+              <small><FontAwesomeIcon icon={faGlobe} /> Website</small>
+            </a>
+            {serverCodeLink && <div>
+              <a href={clientCodeLink} type='button' className='btn btn-sm btn-custom me-3' rel="noreferrer" target="_blank">
+                <small><FontAwesomeIcon icon={faCode} /> Clien Side Code</small>
+              </a>
+              <a href={serverCodeLink} type='button' className='btn btn-sm btn-custom' rel="noreferrer" target="_blank">
+                <small><FontAwesomeIcon icon={faCode} /> Server Side Code</small>
+              </a>
+            </div>}
             {
-              technology.map(icon => (
-                <img src={`https://img.icons8.com/color/32/000000/${icon}.png`} alt={icon} />
-              ))
+              !serverCodeLink && <a href={clientCodeLink} type='button' className='btn btn-sm btn-custom me-3' rel="noreferrer" target="_blank">
+                <small><FontAwesomeIcon icon={faCode} /> Code</small>
+              </a>
             }
           </div>
         </div>
-        <div className="d-flex justify-content-around my-4">
-          <a href={websiteLink} type='button' className='btn btn-custom' rel="noreferrer" target="_blank">
-            <FontAwesomeIcon icon={faGlobe} /> Website
-                </a>
-          <a href={codeLink} type='button' className='btn btn-custom' rel="noreferrer" target="_blank">
-            <FontAwesomeIcon icon={faCode} /> Code
-                </a>
+      </div>
+      <div className="col-lg-7 col-12 p-lg-5 d-flex justify-content-center align-items-center order-1 order-lg-2">
+        <div className="">
+          <ImageSlider projectImg={projectImg}></ImageSlider>
         </div>
       </div>
     </div>

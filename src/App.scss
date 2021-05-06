@@ -6,6 +6,8 @@ body {
 .btn-custom {
   border: 2px solid #fb4848;
   color: #fb4848;
+  background-color: transparent;
+  transition: all 0.4s ease-in;
   &:hover {
     color: white;
     background-color: #fb4848;
